@@ -7,6 +7,8 @@ public class ApplePicker : MonoBehaviour {
 	public float            basketBottomY = -14f;
 	public float            basketSpacingY = 2f;
 	public List<GameObject> basketList;
+	public static int     currentScore;//variable for scoreGT
+	public static GUIText        scoreGT;
 	// Use this for initialization
 	void Start () {
 		basketList = new List<GameObject>();
@@ -17,6 +19,13 @@ public class ApplePicker : MonoBehaviour {
 			tBasketGO.transform.position = pos;
 			basketList.Add( tBasketGO );   
 		}
+
+		// Find a reference to the ScoreCounter GameObject
+		GameObject scoreGO = GameObject.Find("ScoreCounter");               // 2
+		// Get the GUIText Component of that GameObject
+		scoreGT = scoreGO.GetComponent<GUIText>();                          // 3
+		// Set the starting number of points to 0
+		scoreGT.text = "0";
 	}
 	
 	// Update is called once per frame

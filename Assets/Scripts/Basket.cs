@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class Basket : MonoBehaviour {
-	public GUIText        scoreGT;
+	//public GUIText        scoreGT;
 	void Start () {
-		// Find a reference to the ScoreCounter GameObject
+		/*// Find a reference to the ScoreCounter GameObject
 		GameObject scoreGO = GameObject.Find("ScoreCounter");               // 2
 		// Get the GUIText Component of that GameObject
 		scoreGT = scoreGO.GetComponent<GUIText>();                          // 3
 		// Set the starting number of points to 0
-		scoreGT.text = "0";
+		scoreGT.text = "0";*/
 	}
 	
 	// Update is called once per frame
@@ -29,7 +29,7 @@ public class Basket : MonoBehaviour {
 		this.transform.position = pos;
 	}
 
-	void OnCollisionEnter( Collision coll ) {                               // 2
+	/*void OnCollisionExit( Collision coll ) {                               // 2
 		// Find out what hit this basket
 		GameObject collidedWith = coll.gameObject;                          // 3
 		if ( collidedWith.tag == "Apple" ) {                                // 4
@@ -45,6 +45,6 @@ public class Basket : MonoBehaviour {
 		if (score > HighScore.score) {
 			HighScore.score = score;
 		}
-	}
+	}*/
 	
 }

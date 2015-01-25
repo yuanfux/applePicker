@@ -29,9 +29,6 @@ public class Apple : MonoBehaviour {
 						ApplePicker.currentScore += 100;
 						// Convert the score back to a string and display it
 						ApplePicker.scoreGT.text = ApplePicker.currentScore.ToString ();
-			if (ApplePicker.currentScore > HighScore.score) {
-				HighScore.score = ApplePicker.currentScore;
-						}
 
 				}
 }

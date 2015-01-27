@@ -10,6 +10,7 @@ public class ApplePicker : MonoBehaviour {
 	public static int     currentScore;//variable for scoreGT
 	public static GUIText        scoreGT;
 	// Use this for initialization
+	
 	void Start () {
 		basketList = new List<GameObject>();
 		for (int i=0; i<numBaskets; i++) {
@@ -52,4 +53,12 @@ public class ApplePicker : MonoBehaviour {
 			currentScore=0;
 		}
 	}
+
+	void OnApplicationQuit(){
+
+		HighScore.setPlayerPrefHighScore();
+
+
+		}
+
 }

@@ -20,7 +20,7 @@ public class HighScore : MonoBehaviour {
 		GUIText gt = this.GetComponent<GUIText>();
 		gt.text = "High Score: "+score;
 
-		if (ApplePicker.currentScore > HighScore.score) {
+		if (ApplePicker.currentScore > HighScore.score) {//logic encapsulated
 			score = ApplePicker.currentScore;
 		}
 
@@ -30,7 +30,7 @@ public class HighScore : MonoBehaviour {
 	static public void setPlayerPrefHighScore(){
 
 
-		if (score > PlayerPrefs.GetInt("ApplePickerHighScore")) {           // invokered in ApplePick
+		if (score > PlayerPrefs.GetInt("ApplePickerHighScore")) {           // invokered in ApplePicker.cs
 			PlayerPrefs.SetInt("ApplePickerHighScore", score);
 		}
 		}

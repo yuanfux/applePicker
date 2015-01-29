@@ -48,7 +48,7 @@ public class ApplePicker : MonoBehaviour {
 		basketList.RemoveAt( basketIndex );
 		Destroy( tBasketGO );
 		if ( basketList.Count == 0 ) {
-			HighScore.setPlayerPrefHighScore();
+			HighScore.setPlayerPrefHighScore();//invoker the set PlayerPref Highscore when basket number equals 0
 			Application.LoadLevel( "_Scene_0" );
 			currentScore=0;
 		}
